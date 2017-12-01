@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="estilos/materialize.min.css">
+  <link rel="stylesheet" href="estilos/animate.css">
+	<link rel="stylesheet" href="estilos/estilo.css">
+	<title>Listado de Agentes</title>
+</head>
+<body>
+<modelo >
+
+	
+		<menup :nombre="nombre"></menup>
+
+		<main >
+			<div class="row">
+        <div class="section"></div>
+        <h5 class="col s12 center"><i class="material-icons ">supervisor_account</i> Listar Agentes</h5>
+
+
+
+         
+			 <table class=" container bordered highlight">
+        
+        <thead>
+          
+          <tr>
+            
+              <th >Nombres</th>
+              <th>Apellidos</th>
+              <th>Telefono</th>
+              <th>Email</th>
+              <th class=" tooltipped right" data-position="left" data-delay="50" data-tooltip="Eliminar o editar agentes"><i class=" material-icons left">chevron_left</i>Acciones</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          
+          <tr v-for="(post, index) in posts ">
+            <td >
+              <a class="btn green left">
+              {{post.id}}
+              </a>
+            </td>
+            <td>{{post.userId}}</td>
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td class="right-align">
+              <a alt="Eliminar agente" class="hoverable btn waves-effect waves-light green">
+                <i class="material-icons left">delete</i><span> eliminar</span>  
+              </a>
+                <a alt="Modificar agente" class="hoverable btn waves-effect waves-light green">
+                  <i class="material-icons left">edit</i> <span> modifica</span>
+              </a>
+            </td>
+          </tr>
+          
+        </tbody>
+
+      </table>
+
+      
+			
+		</main>
+		
+		<pie></pie>
+	
+
+
+    </modelo>
+</body>
+</html>
+<script src="js/jquery.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/axios.js"></script>
+<script src="https://rawgit.com/ratiw/vuetable-2/master/dist/vuetable-2.js"></script>
+
+<script src="componentes/plantilla.js"></script>
+
+
+
+
